@@ -13,7 +13,6 @@ body{
   flex-direction: column;
 }
 
-
 .homesrc{
   background-color: rgb(24, 24, 24);
   display: inline-flex;
@@ -26,7 +25,6 @@ body{
   border-radius: 10px;
   height: 90px;
 }
-
 
 .lib{
   left: 10px;
@@ -90,6 +88,7 @@ body{
   overflow-x: hidden;
 }
 
+
 .fixed{
 position: relative;  
 height: 45px;
@@ -104,9 +103,8 @@ background-color: rgb(24, 24, 24);
   left: 32px;
 }
 
-
 .library{
-  margin-top: 30px;
+  margin-top: 10px;
   background-color: rgb(24, 24, 24);
   display: inline-flex;
   flex-direction: column;
@@ -122,22 +120,26 @@ background-color: rgb(24, 24, 24);
 
 .backg::-webkit-scrollbar{
   background:#181818;
-  width: 12px;
+  width: 7px;
   position: relative;
   right: 15px;
+  visibility: hidden;
+  transition: 1s;
 }
+
 
 .backg::-webkit-scrollbar-thumb{
   background:#ffffff50;
+  visibility: visible;
+  transition: 1s;
+  border-radius: 10px;
 }
-
 
 .title,
 .artist{
   visibility: hidden;
   position: relative;
 }
-
 
 .textt{
   visibility: hidden;
@@ -181,3 +183,57 @@ color: gray;
   visibility: hidden;
 }
 
+.mainpage{
+  background-color: rgb(24, 24, 24);
+  width: 1800px;
+  height: 810px;
+  position: absolute;
+  left: 110px;
+  bottom: 809px;
+  top: 10px;
+  border-radius: 10px;
+  display: flex;
+}
+
+@media(max-width:1000px){
+  .mainpage{
+    width: 840px;
+  }
+}
+
+.hi{
+  margin-left: 30px;
+}
+
+
+/*
+.gridbenv {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 350px);
+  grid-auto-rows: 65px;
+  gap: 10px;
+}
+
+.liked {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 150px);
+  grid-auto-rows: 100px;
+  gap: 20px;
+  background-color: grey;
+  position: relative;
+  top: 150px;
+  left: -240px;
+}
+*/
+
+.gridbenv{
+  display: grid;
+  position: relative;
+  gap: -210px;
+}
+
+.liked{
+  width: 350px;
+  height: 70px;
+  background-color: grey;
+}

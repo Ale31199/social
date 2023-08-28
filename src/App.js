@@ -119,6 +119,19 @@ export default function App() {
                         flexDirection:'column'
                         }
                         :{};
+
+                        const main = open ? {
+                          width:'530px',
+                          left:'420px',
+                          ...(!open && {
+                            '@media(max-width:1000px)': {
+                              width: '100px'
+                            }
+                          })
+                          }
+                          :{};
+
+                        
     
   
 
@@ -232,10 +245,21 @@ export default function App() {
                <p className='artist'style={artist}>Smoke Guns</p>
               </div> 
             </div>
-            
-      
           </div>
         </div>
+
+        <div className='mainpage' style={main}>
+              <h1 className='hi'>Good afternoon</h1>
+
+
+              <div className='gridbenv'>
+                <div className='liked'></div>
+                <div className='liked'></div>
+                <div className='liked'></div>
+              </div>
+              </div>
+
+      
     </div>
   );
 }
