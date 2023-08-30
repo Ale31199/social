@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import './homepage.css';
 import React, {useState} from 'react';
 import home from './im/home.png';
 import src from './im/search.png';
@@ -21,17 +21,30 @@ import r1 from './im/R2.jpg';
 import r2 from './im/R3.jpg';
 import r3 from './im/R4.jpg';
 import r4 from './im/R5.jpg';
-//import r5 from './im/R6.jpg';
-//import r6 from './im/R7.jpg';
-//import r7 from './im/R8.jpg';
-//import r8 from './im/R9.jpg';
+import r5 from './im/R6 .jpg';
+import r6 from './im/R7 .jpg';
+import r7 from './im/R8.jpg';
+import r8 from './im/R9 .jpg';
 import r9 from './im/R10.jpg';
-//import r10 from './im/R11.jpg';
+import r10 from './im/R11 .jpg';
+import hrt from './im/heart.png';
+import user from './im/user.png';
+
 
 
 export default function App() {
   const [open, setOpen]=useState(false);
+  const [cerca, setCerca]=useState(false);
 
+
+
+  const trova=()=>{
+    if (cerca){
+      setCerca(false)
+    }else{
+      setCerca(true)
+    }
+  }
 
   const openHeader=()=>{
     if (open){
@@ -41,8 +54,15 @@ export default function App() {
     }
   }
 
+
+  const inp = cerca ? {
+visibility:'visible'
+  }
+  :{};
+
   const homesrc = open ? {
-    alignItems:'start'
+    alignItems:'start',
+    width:'370px'
     }
     :{};
 
@@ -55,13 +75,15 @@ export default function App() {
   const song = open ? {
     display:'flex',
     flexDirection:'row',
-    height:'64px'
+    height:'70px',
+    borderRadius:'5px',
+    marginBottom:'-10px'
     }
     :{};
 
   const title = open ? {
     visibility:'visible',
-    top:'-15px',
+    top:'5px',
     left:'15px',
     fontWeight:'bold',
     
@@ -70,7 +92,7 @@ export default function App() {
 
     const artist = open ? {
       visibility:'visible',
-      top:'-25px',
+      top:'-5px',
     left:'14px',
     color:'grey'
       }
@@ -87,19 +109,22 @@ export default function App() {
             :{};
 
             const libr = open ? {
-              left:'25px',
+              left:'30px',
               }
               :{};
 
               const libra = open ? {
-                left:'80px',
+                left:'75px',
                 visibility:'visible',
-                top:'-40px'
+                top:'-0px',
+          
                 }
                 :{};
               
                 const fixed = open ? {
                   flexDirection:'row',
+                  display:'inline-flex',
+                  left:'18px'
                   }
                   :{};
 
@@ -115,24 +140,32 @@ export default function App() {
 
                       const back = open ? {
                         width:'370px',
+                        left:'3px',
                         display:'flex',
                         flexDirection:'column'
                         }
                         :{};
 
-                        const main = open ? {
-                          width:'530px',
-                          left:'420px',
-                          ...(!open && {
-                            '@media(max-width:1000px)': {
-                              width: '100px'
-                            }
-                          })
-                          }
-                          :{};
-
                         
-    
+                        const main = open
+                        ? {
+                            width: '1490px',
+                            left: '420px',
+                        
+                          }
+                        : {};
+                        
+
+                          const grid1 = open ? {
+                           zoom:'82.5%'
+                             }
+                             :{};
+                             const grid2 = open ? {
+                              zoom:'82.5%'
+                                }
+                                :{};
+
+                      
   
 
   return (
@@ -144,7 +177,7 @@ export default function App() {
       <img className='home'style={homex} src={home}></img>
       <p className='text' style={text}>Home</p>
       
-      <img className='src' style={srcx} src={src}></img>
+      <img className='src' onClick={trova} style={srcx} src={src}></img>
       <p className='textt' style={find}>Search</p>
 
      </div>
@@ -167,99 +200,112 @@ export default function App() {
             </div>
 
             <div className='song'style={song}>
-              <img className='star' src={r9}></img>
+              <img className='star' src={r1}></img>
               <div className='names'>
-               <p className='title'style={title}>UnderWorld</p>
-               <p className='artist'style={artist}>Killinf</p>
+               <p className='title'style={title}>Born Villain</p>
+               <p className='artist'style={artist}>Marilyn Manson</p>
               </div> 
             </div>
 
             <div className='song'style={song}>
               <img className='star' src={r2}></img>
               <div className='names'>
-               <p className='title'style={title}>Damnn</p>
-               <p className='artist'style={artist}>Snorlax</p>
-              </div> 
-            </div>
-
-            <div className='song'style={song}>
-              <img className='star' src={r1}></img>
-              <div className='names'>
-               <p className='title'style={title}>Somewhere In The World</p>
-               <p className='artist'style={artist}>BravoSix</p>
-              </div> 
-            </div>
-
-            <div className='song'style={song}>
-              <img className='star' src={r4}></img>
-              <div className='names'>
-               <p className='title'style={title}>Starlight</p>
-               <p className='artist'style={artist}>RoadFireNine</p>
+               <p className='title'style={title}>Burn Into The Ground</p>
+               <p className='artist'style={artist}>Nickelback</p>
               </div> 
             </div>
 
             <div className='song'style={song}>
               <img className='star' src={r3}></img>
               <div className='names'>
-               <p className='title'style={title}>Robotized</p>
-               <p className='artist'style={artist}>Cyber Space</p>
+               <p className='title'style={title}>Self Control</p>
+               <p className='artist'style={artist}>Laura Branigan</p>
+              </div> 
+            </div>
+
+            <div className='song'style={song}>
+              <img className='star' src={r4}></img>
+              <div className='names'>
+               <p className='title'style={title}>Metallica</p>
+               <p className='artist'style={artist}>Master Of Puppets</p>
+              </div> 
+            </div>
+
+            <div className='song'style={song}>
+              <img className='star' src={r5}></img>
+              <div className='names'>
+               <p className='title'style={title}>Into The Matrix</p>
+               <p className='artist'style={artist}>Aurora</p>
+              </div> 
+            </div>
+
+            <div className='song'style={song}>
+              <img className='star' src={r6}></img>
+              <div className='names'>
+               <p className='title'style={title}>All Eyes On Me</p>
+               <p className='artist'style={artist}>Eminem</p>
+              </div> 
+            </div>
+
+            <div className='song'style={song}>
+              <img className='star' src={r7}></img>
+              <div className='names'>
+               <p className='title'style={title}>Because We Can</p>
+               <p className='artist'style={artist}>Bon Jovi</p>
+              </div> 
+            </div>
+
+            <div className='song'style={song}>
+              <img className='star' src={r8}></img>
+              <div className='names'>
+               <p className='title'style={title}>This Means War</p>
+               <p className='artist'style={artist}>Nickelback</p>
               </div> 
             </div>
 
             <div className='song'style={song}>
               <img className='star' src={r9}></img>
               <div className='names'>
-               <p className='title'style={title}>Thinking About Hell</p>
-               <p className='artist'style={artist}>YouNotMe</p>
+               <p className='title'style={title}>Bad </p>
+               <p className='artist'style={artist}>Micheal Jackson</p>
               </div> 
             </div>
 
             <div className='song'style={song}>
-              <img className='star' src={r1}></img>
+              <img className='star' src={r10}></img>
               <div className='names'>
-               <p className='title'style={title}>They Got Something On Their Mind</p>
-               <p className='artist'style={artist}>Liquid Dragon</p>
-              </div> 
-            </div>
-
-            <div className='song'style={song}>
-              <img className='star' src={r4}></img>
-              <div className='names'>
-               <p className='title'style={title}>Red Moon Blue Sun</p>
-               <p className='artist'style={artist}>Hellspikes</p>
-              </div> 
-            </div>
-
-            <div className='song'style={song}>
-              <img className='star' src={r3}></img>
-              <div className='names'>
-               <p className='title'style={title}>Chipping In</p>
-               <p className='artist'style={artist}>Samurai Warrior</p>
-              </div> 
-            </div>
-
-            <div className='song'style={song}>
-              <img className='star' src={r2}></img>
-              <div className='names'>
-               <p className='title'style={title}>Glass Upon You</p>
-               <p className='artist'style={artist}>Smoke Guns</p>
+               <p className='title'style={title}>Best Of Nickelback Volume 1</p>
+               <p className='artist'style={artist}>Nickelback</p>
               </div> 
             </div>
           </div>
         </div>
 
         <div className='mainpage' style={main}>
-              <h1 className='hi'>Good afternoon</h1>
 
+                <div className='bar'>
+                <button className='but'>&lt;</button>
+                <button className='but2'>&lt;</button>
 
-              <div className='gridbenv'>
-                <div className='liked'></div>
-                <div className='liked'></div>
-                <div className='liked'></div>
+                <img className='friends' src={friends}></img>
+                <img className='user' src={user}></img>
+
+               <div className='theinp' style={inp}>
+                <input className='input'
+                placeholder='What do you want to listen to?'></input>
+                <img className='src2' src={src}></img>
+                </div>
+                 </div>
+            
+
+            <div className='musicbar'>
+              
+            </div>
+          
+          
+          
+          
               </div>
-              </div>
-
-      
     </div>
   );
 }
