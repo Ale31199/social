@@ -10,7 +10,7 @@ import medium from './im/medium-volume.png';
 import mic from './im/microphone.png';
 import library2 from './im/music-album.png';
 import mute from './im/mute.png';
-import pause from './im/pause.png';
+import pausee from './im/pause.png';
 import play from './im/play-button-arrowhead.png';
 import prev from './im/previous.png';
 import queue from './im/queue.png';
@@ -35,6 +35,27 @@ import user from './im/user.png';
 export default function HomePage() {
   const [open, setOpen]=useState(false);
   const [cerca, setCerca]=useState(false);
+  const [pause, setPause]=useState(false);
+  const [mutex, setMute]=useState(false);
+
+  const inMute=()=>{
+    if (mutex){
+      setMute(false)
+    } else {
+      setMute(true)
+    }
+  }
+
+
+
+
+  const inPause=()=>{
+    if (pause){
+      setPause(false)
+    } else {
+      setPause(true)
+    }
+  }
 
 
 
@@ -165,6 +186,36 @@ visibility:'visible'
                                 }
                                 :{};
 
+                                const barr = open ? {
+                                  width:'1490px'
+                                    }
+                                    :{};
+
+                                    const pla = pause ? {
+                                      visibility:'hidden'
+                                        }
+                                        :{};
+
+                                        const pa = pause ? {
+                                          visibility:'visible'
+                                            }
+                                            :{};
+
+                                            const volu = mutex ? {
+                                              visibility:'hidden'
+                                                }
+                                                :{};
+        
+                                                const mutee = mutex ? {
+                                                  visibility:'visible'
+                                                    }
+                                                    :{};
+
+                                                    const progr = mutex ? {
+                                                      backgroundColor:'#353535'
+                                                        }
+                                                        :{};
+
                       
   
 
@@ -281,10 +332,8 @@ visibility:'visible'
           </div>
         </div>
 
+
         <div className='mainpage' style={main}>
-
-          
-
 
               <h1 className='hi'>Good afternoon</h1>
 
@@ -364,7 +413,7 @@ visibility:'visible'
                   <img className='play3'src={play}></img>
                   </div> 
                    <div className='nameart'>
-                    <p className='name'>Starfield Official Sountrack</p>
+                    <p className='name'>Starfield OST</p>
                     <p className='namex'>Bethesda Games Studio and more</p>
                    </div>
                   </div>
@@ -516,7 +565,7 @@ visibility:'visible'
                   
                 </div>
 
-                <div className='bar'>
+                <div className='bar' style={barr}>
                 <button className='but'>&lt;</button>
                 <button className='but2'>&lt;</button>
 
@@ -531,15 +580,58 @@ visibility:'visible'
                  </div>
             
 
-            <div className='musicbar'>
-
-            </div>
+            
           
           
           
           
               </div>
+
+              <div className='musicbar'>
+               <div className='songxx'>
+                 <img className='starxx' src={r8}></img>
+               <div className='namesx'>
+                 <p className='titlex'>This Means War</p>
+                 <p className='artistx'>Nickelback</p>
+                 <img className='heart' src={hrt}></img>
+               </div> 
+
+               <div className='playbar'>
+                <img className='shuffle' src={shuffle}></img>
+                <img className='prev' src={prev}></img>
+                <img className='playy' onClick={inPause} style={pla} src={play}></img>
+                <img className='pause'onClick={inPause} style={pa} src={pausee}></img>
+                <img className='next' src={prev}></img>
+                <img className='repeat' src={repeat}></img>
+                <div class="probar">
+                <div class="progress"></div>
+                </div>
+
+               </div>
+               <div className='timesong'>
+               <p className='time'>1:21</p>
+<p className='time'>3:20</p>
+</div>
+
+
+<div className='rightside'>
+<img className='mic' src={mic}></img>
+<img className='queue' src={queue}></img>
+<img className='device' src={devices}></img>
+<img className='medium' onClick={inMute} style={volu} src={medium}></img>
+<div class="probarx">
+                <div style={progr} class="progressx"></div>
+                </div>
+<img className='mute' onClick={inMute} style={mutee} src={mute}></img>
+</div>
+
+              </div>
+
+
+              </div>
     </div>
+
+
   );
 }
 

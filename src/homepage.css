@@ -219,6 +219,13 @@ color: gray;
   overflow-x: hidden;
 }
 
+.nameart{
+  position: relative;
+  bottom:-10px;
+  zoom: 95%;
+  width: 180px;
+}
+
 .mainpage::-webkit-scrollbar{
   background:#181818;
   width: 7px;
@@ -285,15 +292,12 @@ color: gray;
   .playlist{
 top: 870px;
   }
-  .playlist2{
-
-  }
   
 }
 
 
 .liked{
-  background-color: rgb(61, 61, 61);
+  background-color: rgb(48, 48, 48);
   border-radius: 5px;
   width: 560px;
   height: 80px;
@@ -332,7 +336,7 @@ top: 870px;
 .play{
   width: 20px;
   height: 20px;
-  background-color: rgb(0, 177, 0);
+  background-color: rgb(33, 206, 85);
   padding: 19px;
   border-radius: 28px;
   position: relative;
@@ -349,7 +353,7 @@ top: 870px;
 }
 
 .liked:hover{
-  background-color: rgb(97, 97, 97);
+  background-color: rgba(97, 97, 97, 0.719);
   .play{
     opacity: 1;
   }
@@ -412,7 +416,7 @@ background-color: rgb(31, 31, 31);
 border-radius: 5px;
 padding: 15px;
 width: 160px;
-height: 260px;
+height: 235px;
 justify-content: center;
 align-items: center;
 transition: 1s;
@@ -491,6 +495,8 @@ cursor: pointer;
 
 .namex{
   color: grey;
+  position: relative;
+  top: -10px;
 }
 
 
@@ -504,7 +510,7 @@ cursor: pointer;
 .play2{
   width: 20px;
   height: 20px;
-  background-color: rgb(0, 177, 0);
+  background-color: rgb(33, 206, 85);
   padding: 19px;
   border-radius: 28px;
   position: absolute;
@@ -661,4 +667,281 @@ filter: invert(0.5);
   display: flex;
   align-items: center;
   visibility: hidden;
+}
+
+.musicbar{
+  width: 1885px;
+  height: 70px;
+  border-radius: 10px;
+  position: relative;
+  bottom: -12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media(max-width:1000px){
+  .musicbar{
+  width: 938px;
+}
+}
+
+
+
+.songxx{
+  position: relative;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  margin-bottom: 15px;
+  align-items: center;
+  /*height: 64px;*/
+
+}
+.namesx{
+  visibility: visible;
+}
+
+.starxx{
+  width: 55px;
+  height: 55px;
+  border-radius: 6px;
+ /* margin-bottom:15px;*/
+}
+
+.titlex,
+.artistx{
+  visibility: visible;
+  position: relative;
+left: 16px;
+top: -16px;
+margin-bottom: -15px;
+}
+
+.titlex{
+  font-weight: bold;
+  font-size: 14px;
+  width: 130px;
+}
+
+.artistx{
+  color: #a0a0a0;
+  font-size: 13px;
+}
+
+.heart{
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 210px;
+  top: 10px;
+  filter: invert(1);
+}
+
+.shuffle,
+.prev,
+.next,
+.playy,
+.pause,
+.repeat{
+  width: 20px;
+  height: 20px;
+  filter: invert(0.5);
+  margin-left: 12px;
+  margin-right: 12px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+.shuffle:hover{
+  filter: invert(1);
+}
+.prev:hover{
+  filter: invert(1);
+}
+.next:hover{
+  filter: invert(1);
+}
+.repeat:hover{
+  filter: invert(1);
+}
+
+.shuffle,
+.prev{
+  left: 13px;
+}
+
+
+.pause{
+  visibility: hidden;
+  background-color: white;
+  filter: invert(0);
+  padding: 8px;
+  border-radius: 90px;
+  right:45px;
+  position: relative;
+}
+
+.repeat{
+right: 40px;
+width: 16px;
+height: 16px;
+}
+.next{
+  rotate: 180deg;
+  right: 43px;
+  width: 13px;
+  height: 13px;
+}
+
+.prev{
+  width: 13px;
+  height: 13px;
+}
+
+.playy{
+  background-color: white;
+  filter: invert(0);
+  padding: 8px;
+  border-radius: 90px;
+  right:-15px ;
+}
+
+.playbar{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  left: 650px;
+  justify-content: space-between;
+  align-items: center;
+  top: -16px;
+}
+
+@media(max-width:1000px){
+  .playbar{
+    left: 160px;
+  }
+}
+
+.probar {
+  width: 625px;
+  height: 4px;
+  background-color: #353535;
+  border-radius: 2px;
+  position: absolute;
+  bottom: -15px;
+  right: -160px;
+}
+
+.progress {
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 2px;
+  width: 39%; /* Modifica questo valore per rappresentare la percentuale di avanzamento */
+}
+
+
+@media(max-width:1000px){
+  .probar{
+    width: 310px;
+    right: -4px;
+      }
+     
+}
+
+.timesong{
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  position: relative;
+  font-size: 12px;
+  color: #838383;
+  left: 146px;
+  top: 13px;
+}
+
+@media(max-width:1000px){
+  .timesong{
+    width: 365px;
+    left: -173px;
+  }
+}
+
+.rightside{
+position: relative;
+right: -450px;
+}
+
+@media(max-width:1000px){
+  .rightside{
+    right: 160px;
+    width: 240px;
+  }
+}
+
+.mic,
+.queue,
+.device,
+.medium,
+.mute{
+  width: 18px;
+  height: 18px;
+  filter: invert(0.5);
+  margin-left: 15px;
+}
+
+.mute{
+  visibility: hidden;
+  right: 33px;
+  top: -1px;
+  width: 14px;
+  height: 14px;
+  position: relative;
+}
+
+.mic:hover{
+  filter: invert(1);
+}
+.queue:hover{
+  filter: invert(1);
+}
+.device:hover{
+  filter: invert(1);
+}
+.medium:hover{
+  filter: invert(1);
+}
+.mute:hover{
+  filter: invert(1);
+}
+
+.probarx {
+  width: 100px;
+  height: 4px;
+  background-color: #353535;
+  border-radius: 2px;
+  position: absolute;
+  bottom: -15px;
+  right: -80px;
+  bottom: 10px;
+}
+
+.progressx {
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 2px;
+  width: 69%; /* Modifica questo valore per rappresentare la percentuale di avanzamento */
+}
+
+
+@media(max-width:1000px){
+  .probarx{
+    width: 100px;
+    right: -4px;
+      }
+     
 }
