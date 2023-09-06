@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/github.io/social/static/css/main.066a419a.css",
+    "main.js": "/github.io/social/static/js/main.f7a0df60.js",
+    "static/js/787.9181411e.chunk.js": "/github.io/social/static/js/787.9181411e.chunk.js",
+    "static/media/R4.jpg": "/github.io/social/static/media/R4.feecf524894241c4c7f0.jpg",
+    "static/media/R8.jpg": "/github.io/social/static/media/R8.3d3fad6b5bfb37ab4e37.jpg",
+    "static/media/R2.jpg": "/github.io/social/static/media/R2.18956374d7fbc12db920.jpg",
+    "static/media/star2 - Copy.jpg": "/github.io/social/static/media/star2 - Copy.d356ae8b06ce0154b18a.jpg",
+    "static/media/R5.jpg": "/github.io/social/static/media/R5.b0c23f182a7c913fdc24.jpg",
+    "static/media/R6 .jpg": "/github.io/social/static/media/R6 .ecbd274c14b366cb89b6.jpg",
+    "static/media/R3.jpg": "/github.io/social/static/media/R3.87e3d3040f216bb9f202.jpg",
+    "static/media/R9 .jpg": "/github.io/social/static/media/R9 .cd23d2a7957d4584ac32.jpg",
+    "static/media/R7 .jpg": "/github.io/social/static/media/R7 .65e939c16da44b9b829b.jpg",
+    "static/media/R10.jpg": "/github.io/social/static/media/R10.72c51ccecf8d59c9f006.jpg",
+    "static/media/R11 .jpg": "/github.io/social/static/media/R11 .2652ef5630ace44a3f7d.jpg",
+    "static/media/friends.png": "/github.io/social/static/media/friends.21b54476ee65f2b67767.png",
+    "static/media/microphone.png": "/github.io/social/static/media/microphone.25ac8c793d9292cc8b5b.png",
+    "static/media/music-album.png": "/github.io/social/static/media/music-album.e4b3f215b4669daade81.png",
+    "static/media/medium-volume.png": "/github.io/social/static/media/medium-volume.71cf7588d1ae755db04b.png",
+    "static/media/logo.svg": "/github.io/social/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/github.io/social/index.html",
+    "main.066a419a.css.map": "/github.io/social/static/css/main.066a419a.css.map",
+    "main.f7a0df60.js.map": "/github.io/social/static/js/main.f7a0df60.js.map",
+    "787.9181411e.chunk.js.map": "/github.io/social/static/js/787.9181411e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.066a419a.css",
+    "static/js/main.f7a0df60.js"
+  ]
+}
